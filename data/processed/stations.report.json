@@ -1,0 +1,8 @@
+{
+  "input_rows": 855,
+  "output_rows": 500,
+  "invalid_coordinate_rows_removed": 0,
+  "duplicate_rows_removed": 355,
+  "missing_power_filled": 1,
+  "source_url": "https://www.kaggle.com/datasets/pranjal9091/ev-charging-stations-in-india-simplified-2025"
+}

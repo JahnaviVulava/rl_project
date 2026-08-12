@@ -1,0 +1,14 @@
+mode: review
+seed: 42
+candidate_count: 10
+simulation:
+  episode_steps: 75
+  # REVIEW ASSUMPTION: two plugs makes queue progression visible in a short demo.
+  default_chargers: 2
+network:
+  review_station_count: 15
+training:
+  ppo_timesteps: 10000
+  dqn_timesteps: 10000
+  a2c_timesteps: 10000
+  evaluation_episodes: 5

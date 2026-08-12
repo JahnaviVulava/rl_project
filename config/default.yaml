@@ -1,0 +1,52 @@
+mode: offline
+seed: 42
+paths:
+  raw_data: data/raw/Indian_EV_Stations_Simplified.csv
+  processed_data: data/processed/stations.csv
+  model_dir: models
+simulation:
+  step_minutes: 5
+  episode_steps: 100
+  default_chargers: 4
+  default_price_inr_kwh: 18.0
+  charging_efficiency: 0.90
+  consumption_kwh_km: 0.18
+  safe_range_factor: 0.80
+  estimated_speed_kmh: 35.0
+  max_wait_minutes: 180.0
+candidate_count: 10
+network:
+  edge_radius_km: 25.0
+  review_station_count: 15
+reward:
+  waiting: 0.25
+  travel: 0.20
+  cost: 0.15
+  utilization: 0.10
+  balance: 0.10
+  demand: 0.10
+  compatibility: 0.10
+pricing:
+  min_inr_kwh: 8.0
+  max_inr_kwh: 40.0
+  peak_markup: 0.15
+  utilization_markup: 0.20
+  demand_markup: 0.15
+providers:
+  overpass_url: https://overpass-api.de/api/interpreter
+  overpass_urls:
+    - https://overpass-api.de/api/interpreter
+    - https://overpass.kumi.systems/api/interpreter
+  osrm_url: https://router.project-osrm.org
+  open_meteo_url: https://api.open-meteo.com/v1/forecast
+  timeout_seconds: 10
+recommendation_guardrail:
+  maximum_extra_minutes: 8.0
+  maximum_extra_cost_fraction: 0.10
+  minimum_decision_score_improvement: 1.0
+training:
+  ppo_timesteps: 10000
+  dqn_timesteps: 10000
+  a2c_timesteps: 10000
+  review_timesteps: 1000
+  evaluation_episodes: 10

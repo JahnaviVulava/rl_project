@@ -1,0 +1,17 @@
+{
+  "best_evaluated_model": "Maximum Free",
+  "best_rl_models": [
+    "DQN",
+    "PPO"
+  ],
+  "training_seed": 42,
+  "held_out_evaluation_seeds": [
+    101,
+    102,
+    103,
+    104,
+    105
+  ],
+  "selection_basis": "highest mean reward across held-out scenarios",
+  "accuracy_note": "RL has no classification accuracy; use success rate and evaluation metrics."
+}

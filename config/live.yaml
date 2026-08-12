@@ -1,0 +1,4 @@
+mode: live
+candidate_count: 10
+providers:
+  timeout_seconds: 12
